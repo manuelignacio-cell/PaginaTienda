@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | ColliClothes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/registro.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>ColliClothes</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html" aria-current="page">Registro</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Crear cuenta</h2>
+            <p>Regístrate para guardar tus datos como cliente de ColliClothes.</p>
+
+            <form id="formulario-registro" class="formulario-contacto" novalidate>
+                <label for="run">RUN</label>
+                <input type="text" id="run" name="run" required aria-describedby="ayuda-run error-run">
+                <p id="ayuda-run">Escríbelo sin puntos ni guion.</p>
+                <p id="error-run" class="error" aria-live="polite"></p>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="given-name" required aria-describedby="error-nombre">
+                <p id="error-nombre" class="error" aria-live="polite"></p>
+
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" required aria-describedby="error-apellidos">
+                <p id="error-apellidos" class="error" aria-live="polite"></p>
+
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="error-correo">
+                <p id="error-correo" class="error" aria-live="polite"></p>
+
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" aria-describedby="ayuda-fecha">
+                <p id="ayuda-fecha">Este dato es opcional.</p>
+
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" autocomplete="street-address" required aria-describedby="error-direccion">
+                <p id="error-direccion" class="error" aria-live="polite"></p>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" required aria-describedby="ayuda-password error-password">
+                <p id="ayuda-password">Debe tener entre 4 y 10 caracteres.</p>
+                <p id="error-password" class="error" aria-live="polite"></p>
+
+                <button type="submit" id="registrar" disabled>Registrarme</button>
+                <p id="resultado-registro" role="status"></p>
+                <noscript>Activa JavaScript para comprobar el formulario de registro.</noscript>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>ColliClothes - Ropa con identidad.</p>
+    </footer>
+</body>
+</html>

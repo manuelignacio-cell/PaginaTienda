@@ -29,6 +29,8 @@ La página `pages/nosotros.html` cuenta el origen de ColliClothes y presenta a l
 
 La página `pages/contacto.html` valida los datos en tiempo real y al pulsar Enviar mediante `js/contacto.js`: nombre obligatorio de hasta 100 caracteres; correo obligatorio para responder las consultas, de hasta 100 caracteres con dominio duoc.cl, profesor.duoc.cl o gmail.com; comentario obligatorio de hasta 500 caracteres. Muestra errores y un contador de caracteres. No envía ni almacena mensajes: falta integrar un servicio de envío.
 
+Las páginas `pages/registro.html` y `pages/login.html` permiten crear una cuenta de cliente e iniciar sesión. El registro valida RUN sin puntos ni guion, nombre, apellidos, correo, dirección y contraseña. El inicio de sesión revisa el correo y contraseña contra los usuarios guardados. Como el proyecto es solo frontend, los usuarios y la sesión se guardan en localStorage del navegador.
+
 ## Forma de trabajo
 
 El desarrollo se realizará por etapas, distribuyendo las tareas entre los
