@@ -19,6 +19,8 @@ Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla 
 
 Página principal con estructura HTML básica: encabezado, navegación interna, bienvenida, sección de productos y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. Todavía no incluye JavaScript.
 
+La sección de productos muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado todavía es estático y no tiene carrito.
+
 Para verla, abrir `index.html` en un navegador.
 
 ## Forma de trabajo
