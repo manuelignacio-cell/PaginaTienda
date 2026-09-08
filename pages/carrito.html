@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | ColliClothes</title>
+    <title>Carrito | ColliClothes</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/datos-productos.js" defer></script>
-    <script src="../js/productos.js" defer></script>
+
     <script src="../js/carrito.js" defer></script>
 </head>
 <body>
@@ -15,21 +15,24 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html" aria-current="page">Productos</a></li>
+                <li><a href="productos.html">Productos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="carrito.html" aria-current="page">Carrito</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="productos">
-            <h2>Nuestros productos</h2>
-            <p>Conoce algunas de nuestras prendas.</p>
+        <section>
+            <h2 id="titulo-carrito" tabindex="-1">Tu carrito</h2>
             <p id="mensaje-carrito" role="status"></p>
-            <div id="lista-productos" class="lista-productos"></div>
-            <noscript>Activa JavaScript para ver nuestros productos.</noscript>
+            <p id="carrito-vacio">Tu carrito está vacío.</p>
+            <div id="lista-carrito"></div>
+            <p class="precio">Total de productos: <span id="total-carrito">$0</span></p>
+            <button class="boton-tienda" type="button" id="vaciar-carrito" disabled>Vaciar carrito</button>
+            <p><a href="productos.html">Seguir comprando</a></p>
+            <noscript>Activa JavaScript para ver y modificar tu carrito.</noscript>
         </section>
     </main>
 
@@ -38,3 +41,4 @@
     </footer>
 </body>
 </html>
+

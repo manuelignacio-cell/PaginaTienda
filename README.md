@@ -19,7 +19,7 @@ Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla 
 
 Página principal con estructura HTML básica: encabezado, navegación entre páginas, bienvenida, enlace al catálogo y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. La página de contacto utiliza JavaScript para validar su formulario.
 
-La página `pages/productos.html` muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado se genera desde un arreglo en `js/productos.js`, usando un ciclo `forEach` para crear las tarjetas. Todavía no tiene carrito.
+La página `pages/productos.html` muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado se genera desde un arreglo en `js/datos-productos.js` y se dibuja con `js/productos.js`, usando un ciclo `forEach` para crear las tarjetas. Cada tarjeta enlaza a un detalle HTML propio y permite agregar la prenda al carrito.
 
 El inicio presenta la tienda con el mensaje «Prendas con historia. Estilo propio.», un enlace al catálogo y una sección sobre moda y cultura. Utiliza las fotos `img/inicioweb.jpg` e `img/traviscineweb.jpg`, con una distribución que se adapta a celulares mediante CSS.
 
@@ -33,3 +33,11 @@ La página `pages/contacto.html` valida los datos en tiempo real y al pulsar Env
 
 El desarrollo se realizará por etapas, distribuyendo las tareas entre los
 integrantes y registrando cada avance con un commit descriptivo.
+
+## Detalles y carrito
+
+Cada prenda tiene una página de detalle con foto, descripción, precio y botón para agregar al carrito. Los precios de los detalles están escritos en HTML y deben actualizarse junto con el arreglo de productos.
+
+El carrito permite agregar desde catálogo y detalle, cambiar cantidades, quitar prendas y vaciar la lista. Una prenda repetida aumenta su cantidad. Se permiten cantidades enteras de 1 a 99 por prenda; es un límite de la compra, no un stock real. El total suma precio por cantidad en pesos chilenos. No incluye pagos ni envío de pedidos.
+
+La información se guarda en localStorage del navegador. Para compartir correctamente el carrito entre páginas, abre el proyecto con un servidor local, por ejemplo Live Server en VS Code, usando siempre la misma dirección y puerto. Al abrir archivos directamente, el almacenamiento puede variar entre páginas según el navegador.
