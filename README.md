@@ -17,13 +17,15 @@ Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla 
 
 ## Estado actual
 
-Página principal con estructura HTML básica: encabezado, navegación entre páginas, bienvenida, enlace al catálogo y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. Todavía no incluye JavaScript.
+Página principal con estructura HTML básica: encabezado, navegación entre páginas, bienvenida, enlace al catálogo y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. La página de contacto utiliza JavaScript para validar su formulario.
 
 La página `pages/productos.html` muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado todavía es estático y no tiene carrito.
 
 Para verla, abrir `index.html` en un navegador.
 
 La página `pages/nosotros.html` cuenta el origen de Colliclothes y presenta a los integrantes: Cristóbal Colli, Manuel Araya e Ignacio Pérez. Comparte los estilos del inicio y se accede desde el menú de navegación.
+
+La página `pages/contacto.html` valida los datos en tiempo real y al pulsar Enviar mediante `js/contacto.js`: nombre obligatorio de hasta 100 caracteres; correo obligatorio para responder las consultas, de hasta 100 caracteres con dominio duoc.cl, profesor.duoc.cl o gmail.com; comentario obligatorio de hasta 500 caracteres. Muestra errores y un contador de caracteres. No envía ni almacena mensajes: falta integrar un servicio de envío.
 
 ## Forma de trabajo
 
