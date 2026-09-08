@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | ColliClothes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/contacto.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>ColliClothes</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna consulta sobre nuestras prendas? Déjanos tu comentario.</p>
+            <form id="formulario-contacto" class="formulario-contacto" novalidate>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="error-nombre">
+                <p id="error-nombre" class="error" aria-live="polite"></p>
+
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="ayuda-correo error-correo">
+                <p id="ayuda-correo">Necesitamos tu correo para responder tu consulta. Puedes usar una dirección de Gmail.</p>
+                <p id="error-correo" class="error" aria-live="polite"></p>
+
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" rows="5" required aria-describedby="contador-comentario error-comentario"></textarea>
+                <p id="contador-comentario">0 / 500 caracteres</p>
+                <p id="error-comentario" class="error" aria-live="polite"></p>
+
+                <button type="submit" id="enviar" disabled>Enviar</button>
+                <p>El envío de mensajes aún no está disponible. Puedes comprobar los datos del formulario.</p>
+                <p id="resultado-contacto" role="status"></p>
+                <noscript>Activa JavaScript para comprobar el formulario.</noscript>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>ColliClothes - Ropa con identidad.</p>
+    </footer>
+</body>
+</html>

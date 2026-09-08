@@ -59,7 +59,93 @@ h2 {
 
 #inicio {
     background-color: #e8dfd2;
-    text-align: center;
+}
+
+/* Presentación de la tienda en el inicio */
+.presentacion-inicio,
+.historia-inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+}
+
+.historia-inicio {
+    background-color: #e8dfd2;
+    color: #292929;
+}
+
+.texto-inicio {
+    flex: 1;
+    min-width: 0;
+}
+
+.etiqueta-inicio {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.presentacion-inicio h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.foto-portada,
+.foto-historia {
+    display: block;
+    width: 45%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.foto-portada {
+    max-width: 340px;
+}
+
+.boton-coleccion {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 24px;
+    background-color: #292929;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-coleccion:hover,
+.boton-coleccion:focus-visible {
+    background-color: #4a4036;
+}
+
+.enlace-historia {
+    color: #292929;
+    font-weight: bold;
+}
+
+/* En celulares, mostrar el texto y la foto uno debajo del otro. */
+@media (max-width: 700px) {
+    .presentacion-inicio,
+    .historia-inicio {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .presentacion-inicio h2 {
+        font-size: 32px;
+    }
+
+    .foto-portada,
+    .foto-historia {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* Tarjetas de productos */
@@ -96,6 +182,58 @@ h2 {
     font-weight: bold;
 }
 
+/* Formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 24px auto 0;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    padding: 10px 24px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #292929;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.formulario-contacto button:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+.formulario-contacto .error {
+    color: #a31d1d;
+    margin: 4px 0;
+}
+
+.formulario-contacto [aria-invalid="true"] {
+    border-color: #a31d1d;
+}
+
 /* Pie de página */
 footer {
     padding: 20px 16px;
@@ -106,4 +244,75 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Detalles y carrito: reutilizamos estos estilos en todas las prendas. */
+.enlace-producto,
+.detalle-producto a,
+.fila-carrito a {
+    color: #292929;
+}
+
+.boton-tienda {
+    padding: 10px 16px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #292929;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.boton-tienda:hover,
+.boton-tienda:focus-visible {
+    background-color: #4a4036;
+}
+
+.boton-tienda:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+.detalle-producto {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.detalle-producto img {
+    width: 45%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.detalle-producto > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.fila-carrito {
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+}
+
+.fila-carrito input {
+    width: 65px;
+    padding: 8px;
+    font: inherit;
+}
+
+@media (max-width: 700px) {
+    .detalle-producto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .detalle-producto img {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
