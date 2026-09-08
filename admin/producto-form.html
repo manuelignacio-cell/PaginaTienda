@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColliClothes - Producto</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>COLLI<br>CLOTHES</h2>
+                <p>Administración</p>
+            </div>
+
+            <nav class="menu">
+                <a href="admin.html" class="menu-item">
+                    <span>⌂</span>
+                    Inicio
+                </a>
+                <a href="productos.html" class="menu-item active">
+                    <span>▣</span>
+                    Productos
+                </a>
+                <a href="usuarios.html" class="menu-item">
+                    <span>♙</span>
+                    Usuarios
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <span>↩</span>
+                    Volver a la tienda
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="../index.html" class="logout">
+                    Cerrar sesión
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-container">
+            <header class="topbar">
+                <div>
+                    <h1>Gestión de productos</h1>
+                    <p>Crear y modificar productos de ColliClothes.</p>
+                </div>
+
+                <div class="admin-user">
+                    <span class="user-icon">●</span>
+                    <div>
+                        <strong>Administrador</strong>
+                        <small>ColliClothes</small>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="welcome">
+                    <div>
+                        <h2>Nuevo producto</h2>
+                        <p>
+                            Completa la información del producto para
+                            incorporarlo al catálogo de ColliClothes.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Información del producto</h2>
+                    <form id="producto-form">
+                        <div class="form-group">
+                            <label for="codigo">
+                                Código del producto
+                            </label>
+                            <input
+                                type="text"
+                                id="codigo"
+                                name="codigo"
+                                placeholder="Ej: P005"
+                            >
+                            <small class="error-message" id="error-codigo"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre">
+                                Nombre del producto
+                            </label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ej: Polera"
+                            >
+                            <small class="error-message" id="error-nombre"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">
+                                Descripción
+                            </label>
+                            <textarea
+                                id="descripcion"
+                                name="descripcion"
+                                rows="5"
+                                placeholder="Describe las características del producto..."
+                            ></textarea>
+                            <small class="error-message" id="error-descripcion"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria">
+                                Categoría
+                            </label>
+                            <select id="categoria" name="categoria">
+                                <option value="">
+                                    Selecciona una categoría
+                                </option>
+                                <option value="poleras">
+                                    Poleras
+                                </option>
+                                <option value="polerones">
+                                    Polerones
+                                </option>
+                                <option value="pantalones">
+                                    Pantalones
+                                </option>
+                                <option value="chaquetas">
+                                    Chaquetas
+                                </option>
+                                <option value="shorts">
+                                    Shorts
+                                </option>
+                                <option value="accesorios">
+                                    Accesorios
+                                </option>
+                            </select>
+                            <small class="error-message" id="error-categoria"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precio">
+                                Precio
+                            </label>
+                            <input
+                                type="number"
+                                id="precio"
+                                name="precio"
+                                placeholder="Ej: 19990"
+                                min="0"
+                            >
+                            <small class="error-message" id="error-precio"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock">
+                                Stock disponible
+                            </label>
+                            <input
+                                type="number"
+                                id="stock"
+                                name="stock"
+                                placeholder="Ej: 15"
+                                min="0"
+                            >
+                            <small class="error-message" id="error-stock"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stock-critico">
+                                Stock crítico
+                            </label>
+                            <input
+                                type="number"
+                                id="stock-critico"
+                                name="stock-critico"
+                                placeholder="Ej: 5"
+                                min="0"
+                            >
+                            <small class="error-message" id="error-stock-critico"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="imagen">
+                                Imagen del producto
+                            </label>
+                            <input
+                                type="text"
+                                id="imagen"
+                                name="imagen"
+                                placeholder="Ej: img/polera-oversize.jpg"
+                            >
+                            <small class="error-message" id="error-imagen"></small>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="productos.html" class="cancel-button">
+                                Cancelar
+                            </a>
+                            <button type="submit" class="action-button">
+                                Guardar producto
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Información</h2>
+                    <p>
+                        Los campos del formulario serán validados antes de
+                        registrar el producto. El precio, stock y stock
+                        crítico deben contener valores numéricos válidos.
+                    </p>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>
+                    ColliClothes - Panel de Administración
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
