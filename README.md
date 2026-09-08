@@ -17,11 +17,13 @@ Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla 
 
 ## Estado actual
 
-Página principal con estructura HTML básica: encabezado, navegación interna, bienvenida, sección de productos y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. Todavía no incluye JavaScript.
+Página principal con estructura HTML básica: encabezado, navegación entre páginas, bienvenida, enlace al catálogo y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. Todavía no incluye JavaScript.
 
-La sección de productos muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado todavía es estático y no tiene carrito.
+La página `pages/productos.html` muestra tres prendas de ejemplo con nombre, precio en pesos chilenos y fotos reales guardadas en `img/`. La polera, la chaqueta militar y el pantalón tienen fotos. Las tarjetas se acomodan al ancho de la pantalla mediante CSS. El listado todavía es estático y no tiene carrito.
 
 Para verla, abrir `index.html` en un navegador.
+
+La página `pages/nosotros.html` cuenta el origen de Colliclothes y presenta a los integrantes: Cristóbal Colli, Manuel Araya e Ignacio Pérez. Comparte los estilos del inicio y se accede desde el menú de navegación.
 
 ## Forma de trabajo
 
