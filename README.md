@@ -17,7 +17,7 @@ Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla 
 
 ## Estado actual
 
-Página principal con estructura HTML básica: encabezado, navegación interna, bienvenida, sección de productos y pie de página. Todavía no incluye CSS ni JavaScript.
+Página principal con estructura HTML básica: encabezado, navegación interna, bienvenida, sección de productos y pie de página. Incluye estilos básicos en `css/style.css` para los colores, la fuente, los espacios y el menú horizontal. Todavía no incluye JavaScript.
 
 Para verla, abrir `index.html` en un navegador.
 
