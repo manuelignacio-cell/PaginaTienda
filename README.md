@@ -1,2 +1,27 @@
-# PaginaTienda
-Codigo para trabajo asignatura Desarrollo Fullstack II
+﻿# Colliclothes
+
+Tienda de ropa desarrollada para la primera evaluación de Desarrollo Fullstack II.
+Proyecto grupal con HTML, CSS y JavaScript, sin frameworks.
+
+## Estructura del proyecto
+
+- `css/`: hojas de estilos.
+- `js/`: scripts para formularios, productos y carrito.
+- `img/`: imágenes de ropa y logo de la tienda.
+- `pages/`: páginas de la tienda, como productos, registro y contacto.
+- `admin/`: páginas para administrar productos y usuarios.
+- `README.md`: descripción y organización del proyecto.
+
+La página principal es `index.html`, ubicada en la raíz.
+Cada carpeta vacía contiene un archivo `.gitkeep` para que Git pueda incluirla en el repositorio. Se puede eliminar cuando se agreguen archivos a esa carpeta.
+
+## Estado actual
+
+Página principal con estructura HTML básica: encabezado, navegación interna, bienvenida, sección de productos y pie de página. Todavía no incluye CSS ni JavaScript.
+
+Para verla, abrir `index.html` en un navegador.
+
+## Forma de trabajo
+
+El desarrollo se realizará por etapas, distribuyendo las tareas entre los
+integrantes y registrando cada avance con un commit descriptivo.
