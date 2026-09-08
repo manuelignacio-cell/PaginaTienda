@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColliClothes - Acceso administrativo</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/sesion-admin.js" defer></script>
+    <script src="js/login-admin.js" defer></script>
+</head>
+<body>
+    <main class="admin-login">
+        <h1>ColliClothes</h1>
+        <h2>Acceso administrativo</h2>
+        <p>Ingresa con una cuenta de administrador o vendedor.</p>
+        <p id="resultado-login-admin" class="admin-message admin-message-error" role="status"></p>
+        <form id="login-admin" novalidate>
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input id="correo" type="email" required maxlength="100" autocomplete="username" aria-describedby="error-correo">
+                <small id="error-correo" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input id="password" type="password" required minlength="4" maxlength="10" autocomplete="current-password" aria-describedby="error-password">
+                <small id="error-password" class="error-message"></small>
+            </div>
+            <div class="form-actions">
+                <a href="../index.html" class="cancel-button">Volver a la tienda</a>
+                <button class="action-button" id="ingresar-admin" disabled>Ingresar</button>
+            </div>
+        </form>
+        <noscript>Activa JavaScript para iniciar sesión.</noscript>
+        <p id="primer-acceso" hidden>No hay una cuenta administradora en este navegador. <a href="usuario-form.html?inicial=1">Configurar el primer administrador</a>.</p>
+    </main>
+</body>
+</html>

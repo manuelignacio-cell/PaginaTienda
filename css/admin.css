@@ -251,7 +251,7 @@ body {
     align-items: center;
 }
 
-.section-title a {
+.section-title a:not(.action-button) {
     color: #292929;
     text-decoration: none;
     font-size: 14px;
@@ -445,4 +445,159 @@ form {
     font-family: Arial, sans-serif;
     font-size: 14px;
     cursor: pointer;
+}
+
+/* Gestión de productos: acciones, validación y estados del listado. */
+.table-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-button {
+    color: #292929;
+    background-color: #e8dfd2;
+}
+
+.delete-button {
+    color: #9a182b;
+    background-color: #fff1f3;
+    border-color: #dca8b0;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+.edit-button:focus-visible,
+.delete-button:focus-visible,
+.action-button:focus-visible,
+.cancel-button:focus-visible {
+    outline: 2px solid #292929;
+    outline-offset: 3px;
+}
+
+.form-help {
+    display: block;
+    margin: 6px 0 15px;
+    color: #555555;
+    font-size: 14px;
+}
+
+.form-group [aria-invalid="true"] {
+    border-color: #b00020;
+    box-shadow: 0 0 0 1px #b00020;
+}
+
+.admin-message {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.admin-message:empty {
+    display: none;
+}
+
+.admin-message-error {
+    color: #9a182b;
+    background-color: #fff1f3;
+}
+
+.admin-message-success {
+    color: #225c32;
+    background-color: #edf7ef;
+}
+
+.admin-message-warning,
+.stock-alert {
+    color: #754800;
+    background-color: #fff2cc;
+}
+
+.stock-alert {
+    display: block;
+    margin-top: 5px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.empty-state {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px dashed #777777;
+    border-radius: 8px;
+}
+
+.action-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-protegido:not(.admin-autorizado) body {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+button.logout {
+    width: 100%;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.admin-login {
+    width: 520px;
+    margin: 60px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.admin-login h2,
+.admin-login > p {
+    margin-bottom: 20px;
+}
+
+.product-details dt {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.product-details dd {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* Listado y formulario de usuarios en escritorio. */
+.users-table td {
+    overflow-wrap: anywhere;
+    max-width: 280px;
+}
+
+.users-table .table-actions {
+    white-space: nowrap;
+}
+
+.form-group select:disabled {
+    background-color: #eeeeee;
+    color: #555555;
+    cursor: not-allowed;
 }
