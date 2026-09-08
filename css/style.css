@@ -245,3 +245,74 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Detalles y carrito: reutilizamos estos estilos en todas las prendas. */
+.enlace-producto,
+.detalle-producto a,
+.fila-carrito a {
+    color: #292929;
+}
+
+.boton-tienda {
+    padding: 10px 16px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #292929;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.boton-tienda:hover,
+.boton-tienda:focus-visible {
+    background-color: #4a4036;
+}
+
+.boton-tienda:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+.detalle-producto {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.detalle-producto img {
+    width: 45%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.detalle-producto > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.fila-carrito {
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+}
+
+.fila-carrito input {
+    width: 65px;
+    padding: 8px;
+    font: inherit;
+}
+
+@media (max-width: 700px) {
+    .detalle-producto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .detalle-producto img {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
