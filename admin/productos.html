@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColliClothes - Productos</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>COLLI<br>CLOTHES</h2>
+                <p>Administración</p>
+            </div>
+
+            <nav class="menu">
+                <a href="admin.html" class="menu-item">
+                    <span>⌂</span>
+                    Inicio
+                </a>
+                <a href="productos.html" class="menu-item active">
+                    <span>▣</span>
+                    Productos
+                </a>
+                <a href="usuarios.html" class="menu-item">
+                    <span>♙</span>
+                    Usuarios
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <span>↩</span>
+                    Volver a la tienda
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="../index.html" class="logout">
+                    Cerrar sesión
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-container">
+            <header class="topbar">
+                <div>
+                    <h1>Gestión de productos</h1>
+                    <p>Administra los productos de ColliClothes.</p>
+                </div>
+
+                <div class="admin-user">
+                    <span class="user-icon">●</span>
+                    <div>
+                        <strong>Administrador</strong>
+                        <small>ColliClothes</small>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="welcome">
+                    <div>
+                        <h2>Productos</h2>
+                        <p>
+                            Desde esta sección puedes consultar y gestionar
+                            los productos disponibles en ColliClothes.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <div class="section-title">
+                        <h2>Listado de productos</h2>
+                        <a href="producto-form.html" class="action-button">
+                            + Nuevo producto
+                        </a>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>P001</td>
+                                    <td>Polera basica</td>
+                                    <td>Poleras</td>
+                                    <td>$9.990</td>
+                                    <td>15</td>
+                                    <td>
+                                        <a href="producto-form.html">
+                                            Editar
+                                        </a>
+
+                                        |
+
+                                        <a href="#">
+                                            Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>P002</td>
+                                    <td>Chaqueta militar</td>
+                                    <td>Chaquetas</td>
+                                    <td>$24.990</td>
+                                    <td>3</td>
+                                    <td>
+                                        <a href="producto-form.html">
+                                            Editar
+                                        </a>
+
+                                        |
+
+                                        <a href="#">
+                                            Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>P003</td>
+                                    <td>Pantalon de mezclilla</td>
+                                    <td>Pantalones</td>
+                                    <td>$19.990</td>
+                                    <td>10</td>
+                                    <td>
+                                        <a href="producto-form.html">
+                                            Editar
+                                        </a>
+
+                                        |
+
+                                        <a href="#">
+                                            Eliminar
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="dashboard-section">
+                    <h2>Información</h2>
+                    <p>
+                        Los productos mostrados corresponden al catálogo
+                        administrativo de ColliClothes. Desde esta sección
+                        se podrá controlar su información, precio y stock.
+                    </p>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>
+                    ColliClothes - Panel de Administración
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
