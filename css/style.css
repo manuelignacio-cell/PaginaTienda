@@ -96,6 +96,58 @@ h2 {
     font-weight: bold;
 }
 
+/* Formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 24px auto 0;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    padding: 10px 24px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #292929;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.formulario-contacto button:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
+}
+
+.formulario-contacto .error {
+    color: #a31d1d;
+    margin: 4px 0;
+}
+
+.formulario-contacto [aria-invalid="true"] {
+    border-color: #a31d1d;
+}
+
 /* Pie de página */
 footer {
     padding: 20px 16px;
