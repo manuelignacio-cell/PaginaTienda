@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColliClothes - Productos</title>
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/datos-productos-admin.js" defer></script>
+    <script src="js/productos-admin.js" defer></script>
 </head>
 
 <body>
@@ -78,6 +80,9 @@
                 </section>
 
                 <section class="dashboard-section">
+                    <p id="resultado-productos" class="admin-message" role="status" tabindex="-1"></p>
+                    <noscript>Activa JavaScript para consultar y gestionar los productos.</noscript>
+                    <p id="productos-vacios" class="empty-state" hidden>No hay productos registrados. Usa «Nuevo producto» para agregar el primero.</p>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -91,64 +96,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
-                                <tr>
-                                    <td>P001</td>
-                                    <td>Polera basica</td>
-                                    <td>Poleras</td>
-                                    <td>$9.990</td>
-                                    <td>15</td>
-                                    <td>
-                                        <a href="producto-form.html">
-                                            Editar
-                                        </a>
-
-                                        |
-
-                                        <a href="#">
-                                            Eliminar
-                                        </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>P002</td>
-                                    <td>Chaqueta militar</td>
-                                    <td>Chaquetas</td>
-                                    <td>$24.990</td>
-                                    <td>3</td>
-                                    <td>
-                                        <a href="producto-form.html">
-                                            Editar
-                                        </a>
-
-                                        |
-
-                                        <a href="#">
-                                            Eliminar
-                                        </a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>P003</td>
-                                    <td>Pantalon de mezclilla</td>
-                                    <td>Pantalones</td>
-                                    <td>$19.990</td>
-                                    <td>10</td>
-                                    <td>
-                                        <a href="producto-form.html">
-                                            Editar
-                                        </a>
-
-                                        |
-
-                                        <a href="#">
-                                            Eliminar
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="lista-productos-admin"></tbody>
                         </table>
                     </div>
                 </section>
@@ -158,7 +106,7 @@
                     <p>
                         Los productos mostrados corresponden al catálogo
                         administrativo de ColliClothes. Desde esta sección
-                        se podrá controlar su información, precio y stock.
+                        puedes controlar su información, precio y stock.
                     </p>
                 </section>
             </main>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColliClothes - Producto</title>
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/datos-productos-admin.js" defer></script>
+    <script src="js/producto-form-admin.js" defer></script>
 </head>
 
 <body>
@@ -60,8 +62,8 @@
             <main class="content">
                 <section class="welcome">
                     <div>
-                        <h2>Nuevo producto</h2>
-                        <p>
+                        <h2 id="titulo-producto">Nuevo producto</h2>
+                        <p id="instrucciones-producto">
                             Completa la información del producto para
                             incorporarlo al catálogo de ColliClothes.
                         </p>
@@ -70,7 +72,10 @@
 
                 <section class="dashboard-section">
                     <h2>Información del producto</h2>
-                    <form id="producto-form">
+                    <p class="form-help">Código, nombre, categoría, precio y stock son obligatorios. Los demás campos son opcionales.</p>
+                    <p id="resultado-producto" class="admin-message" role="status" tabindex="-1"></p>
+                    <noscript>Activa JavaScript para validar y guardar productos.</noscript>
+                    <form id="producto-form" novalidate>
                         <div class="form-group">
                             <label for="codigo">
                                 Código del producto
@@ -80,6 +85,7 @@
                                 id="codigo"
                                 name="codigo"
                                 placeholder="Ej: P005"
+                                required minlength="3" aria-describedby="error-codigo"
                             >
                             <small class="error-message" id="error-codigo"></small>
                         </div>
@@ -93,6 +99,7 @@
                                 id="nombre"
                                 name="nombre"
                                 placeholder="Ej: Polera"
+                                required maxlength="100" aria-describedby="error-nombre"
                             >
                             <small class="error-message" id="error-nombre"></small>
                         </div>
@@ -105,6 +112,7 @@
                                 id="descripcion"
                                 name="descripcion"
                                 rows="5"
+                                maxlength="500" aria-describedby="error-descripcion"
                                 placeholder="Describe las características del producto..."
                             ></textarea>
                             <small class="error-message" id="error-descripcion"></small>
@@ -114,7 +122,7 @@
                             <label for="categoria">
                                 Categoría
                             </label>
-                            <select id="categoria" name="categoria">
+                            <select id="categoria" name="categoria" required aria-describedby="error-categoria">
                                 <option value="">
                                     Selecciona una categoría
                                 </option>
@@ -150,7 +158,9 @@
                                 name="precio"
                                 placeholder="Ej: 19990"
                                 min="0"
+                                step="any" required aria-describedby="ayuda-precio error-precio"
                             >
+                            <small class="form-help" id="ayuda-precio">Admite decimales. El precio cero corresponde a un producto gratis.</small>
                             <small class="error-message" id="error-precio"></small>
                         </div>
 
@@ -164,6 +174,7 @@
                                 name="stock"
                                 placeholder="Ej: 15"
                                 min="0"
+                                step="1" required aria-describedby="error-stock"
                             >
                             <small class="error-message" id="error-stock"></small>
                         </div>
@@ -178,7 +189,9 @@
                                 name="stock-critico"
                                 placeholder="Ej: 5"
                                 min="0"
+                                step="1" aria-describedby="ayuda-stock-critico error-stock-critico"
                             >
+                            <small class="form-help" id="ayuda-stock-critico">Opcional. Si lo completas, se avisará cuando el stock sea igual o inferior al umbral.</small>
                             <small class="error-message" id="error-stock-critico"></small>
                         </div>
 
@@ -190,16 +203,18 @@
                                 type="text"
                                 id="imagen"
                                 name="imagen"
-                                placeholder="Ej: img/polera-oversize.jpg"
+                                placeholder="Ej: ../img/images.jpg"
+                                aria-describedby="error-imagen"
                             >
                             <small class="error-message" id="error-imagen"></small>
                         </div>
 
+                        <p id="alerta-stock" class="admin-message admin-message-warning" role="status"></p>
                         <div class="form-actions">
                             <a href="productos.html" class="cancel-button">
-                                Cancelar
+                                Volver al listado
                             </a>
-                            <button type="submit" class="action-button">
+                            <button type="submit" id="guardar-producto" class="action-button" disabled>
                                 Guardar producto
                             </button>
                         </div>
