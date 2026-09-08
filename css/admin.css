@@ -547,3 +547,57 @@ form {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+.admin-protegido:not(.admin-autorizado) body {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+button.logout {
+    width: 100%;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.admin-login {
+    width: 520px;
+    margin: 60px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.admin-login h2,
+.admin-login > p {
+    margin-bottom: 20px;
+}
+
+.product-details dt {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.product-details dd {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* Listado y formulario de usuarios en escritorio. */
+.users-table td {
+    overflow-wrap: anywhere;
+    max-width: 280px;
+}
+
+.users-table .table-actions {
+    white-space: nowrap;
+}
+
+.form-group select:disabled {
+    background-color: #eeeeee;
+    color: #555555;
+    cursor: not-allowed;
+}

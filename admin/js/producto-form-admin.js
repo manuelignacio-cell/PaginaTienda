@@ -109,7 +109,6 @@
             }
             ProductosAdmin.guardar(productos);
             codigoOriginal = producto.codigo;
-            // Mantener el formulario en edición impide duplicar al volver a pulsar Guardar.
             window.history.replaceState(null, "", "producto-form.html?codigo=" + encodeURIComponent(codigoOriginal));
             tituloEdicion();
             mostrarAlerta();

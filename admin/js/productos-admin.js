@@ -1,4 +1,5 @@
 (() => {
+    if (!SesionAdmin.permite("productos.html")) return;
     const tabla = document.getElementById("lista-productos-admin");
     const mensaje = document.getElementById("resultado-productos");
 
@@ -29,6 +30,11 @@
                 const acciones = document.createElement("td");
                 const grupo = document.createElement("div");
                 grupo.className = "table-actions";
+                const detalle = document.createElement("a");
+                detalle.className = "edit-button";
+                detalle.href = "producto-detalle.html?codigo=" + encodeURIComponent(producto.codigo);
+                detalle.textContent = "Ver detalle";
+                grupo.appendChild(detalle);
                 const editar = document.createElement("a");
                 editar.className = "edit-button";
                 editar.href = "producto-form.html?codigo=" + encodeURIComponent(producto.codigo);
@@ -56,7 +62,7 @@
                         avisar("No se pudo eliminar el producto. Revisa el almacenamiento del navegador.", true);
                     }
                 });
-                grupo.append(editar, eliminar);
+                if (SesionAdmin.actual()?.tipoUsuario === "administrador") grupo.append(editar, eliminar);
                 acciones.appendChild(grupo);
                 fila.appendChild(acciones);
                 tabla.appendChild(fila);
@@ -67,4 +73,12 @@
     }
 
     mostrar();
+    document.getElementById("actualizar-desde-tienda").addEventListener("click", () => {
+        if (!window.confirm("¿Copiar nombres, precios e imágenes del catálogo de la tienda? Se conservarán el stock y los demás datos administrativos. Los productos del catálogo que falten se agregarán.")) return;
+        try {
+            ProductosAdmin.actualizarDesdeTienda();
+            mostrar();
+            avisar("Información del catálogo copiada al panel administrativo.");
+        } catch (error) { avisar("No se pudo actualizar: " + error.message, true); }
+    });
 })();

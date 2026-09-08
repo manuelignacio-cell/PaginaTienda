@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" class="admin-protegido">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColliClothes - Usuarios</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/sesion-admin.js" defer></script>
+    <script src="js/regiones-admin.js" defer></script>
+    <script src="js/datos-usuarios-admin.js" defer></script>
+    <script src="js/usuarios-admin.js" defer></script>
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>COLLI<br>CLOTHES</h2>
+                <p>Administración</p>
+            </div>
+            <nav class="menu" aria-label="Administración">
+                <a href="admin.html" class="menu-item"><span aria-hidden="true">⌂</span>Inicio</a>
+                <a href="productos.html" class="menu-item"><span aria-hidden="true">▣</span>Productos</a>
+                <a href="usuarios.html" class="menu-item active" aria-current="page"><span aria-hidden="true">♙</span>Usuarios</a>
+                <a href="../index.html" class="menu-item"><span aria-hidden="true">↩</span>Volver a la tienda</a>
+            </nav>
+            <div class="sidebar-bottom"><button type="button" class="logout">Cerrar sesión</button></div>
+        </aside>
+        <div class="main-container">
+            <header class="topbar">
+                <div><h1>Gestión de usuarios</h1><p>Administra las cuentas de ColliClothes.</p></div>
+                <div class="admin-user">
+                    <span class="user-icon" aria-hidden="true">●</span>
+                    <div><strong>Administrador</strong><small>ColliClothes</small></div>
+                </div>
+            </header>
+            <main class="content">
+                <section class="welcome">
+                    <h2>Usuarios</h2>
+                    <p>Consulta, crea y actualiza las cuentas de la tienda.</p>
+                </section>
+                <section class="dashboard-section">
+                    <div class="section-title">
+                        <h2>Listado de usuarios</h2>
+                        <a href="usuario-form.html" class="action-button">+ Nuevo usuario</a>
+                    </div>
+                    <p id="resultado-usuarios" class="admin-message" role="status" tabindex="-1"></p>
+                    <noscript>Activa JavaScript para gestionar usuarios.</noscript>
+                    <p id="usuarios-vacios" class="empty-state" hidden>No hay usuarios registrados. Usa «Nuevo usuario» para crear una cuenta.</p>
+                    <div class="table-container">
+                        <table class="users-table">
+                            <thead><tr>
+                                <th scope="col">RUN</th><th scope="col">Nombre</th><th scope="col">Correo</th>
+                                <th scope="col">Tipo de usuario</th><th scope="col">Comuna</th><th scope="col">Acciones</th>
+                            </tr></thead>
+                            <tbody id="lista-usuarios"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer"><p>ColliClothes - Panel de Administración</p></footer>
+        </div>
+    </div>
+</body>
+</html>
+

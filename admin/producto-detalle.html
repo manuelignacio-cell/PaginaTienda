@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" class="admin-protegido">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColliClothes - Detalle del producto</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/sesion-admin.js" defer></script>
+    <script src="../js/datos-productos.js" defer></script>
+    <script src="js/datos-productos-admin.js" defer></script>
+    <script src="js/producto-detalle-admin.js" defer></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>COLLI<br>CLOTHES</h2>
+                <p>Administración</p>
+            </div>
+
+            <nav class="menu">
+                <a href="admin.html" class="menu-item">
+                    <span>⌂</span>
+                    Inicio
+                </a>
+                <a href="productos.html" class="menu-item active">
+                    <span>▣</span>
+                    Productos
+                </a>
+                <a href="usuarios.html" class="menu-item">
+                    <span>♙</span>
+                    Usuarios
+                </a>
+                <a href="../index.html" class="menu-item">
+                    <span>↩</span>
+                    Volver a la tienda
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button type="button" class="logout">Cerrar sesión</button>
+            </div>
+        </aside>
+
+        <div class="main-container">
+            <header class="topbar">
+                <div>
+                    <h1>Gestión de productos</h1>
+                    <p>Administra los productos de ColliClothes.</p>
+                </div>
+
+                <div class="admin-user">
+                    <span class="user-icon">●</span>
+                    <div>
+                        <strong>Administrador</strong>
+                        <small>ColliClothes</small>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content"><section class="welcome"><h2 id="titulo-detalle">Detalle del producto</h2></section><section class="dashboard-section" id="detalle-producto"></section><a href="productos.html" class="cancel-button">Volver al listado</a></main>
+
+            <footer class="footer">
+                <p>
+                    ColliClothes - Panel de Administración
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

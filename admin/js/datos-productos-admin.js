@@ -1,4 +1,3 @@
-// Datos exclusivos del panel. La integración con el catálogo público queda pendiente.
 const ProductosAdmin = (() => {
     const clave = "colliclothes-productos-admin";
     const categorias = {
@@ -11,7 +10,6 @@ const ProductosAdmin = (() => {
         { codigo: "P003", nombre: "Pantalón de mezclilla", descripcion: "", categoria: "pantalones", precio: 19990, stock: 10, stockCritico: null, imagen: "../img/pantalonboot.webp" }
     ];
 
-    // Reglas del Anexo 1, páginas 14 y 15. Un umbral vacío no equivale a cero.
     function validar(datos, productos = [], codigoOriginal = null) {
         const errores = {};
         const codigo = datos.codigo.trim();
@@ -55,7 +53,6 @@ const ProductosAdmin = (() => {
     }
 
     function guardar(productos) {
-        // Si falla el almacenamiento, el llamador muestra el error sin anunciar éxito.
         localStorage.setItem(clave, JSON.stringify(productos));
     }
 

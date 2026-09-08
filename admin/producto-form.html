@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="admin-protegido">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColliClothes - Producto</title>
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/sesion-admin.js" defer></script>
+    <script src="../js/datos-productos.js" defer></script>
     <script src="js/datos-productos-admin.js" defer></script>
     <script src="js/producto-form-admin.js" defer></script>
 </head>
@@ -37,9 +39,7 @@
             </nav>
 
             <div class="sidebar-bottom">
-                <a href="../index.html" class="logout">
-                    Cerrar sesión
-                </a>
+                <button type="button" class="logout">Cerrar sesión</button>
             </div>
         </aside>
 

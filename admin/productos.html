@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="admin-protegido">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColliClothes - Productos</title>
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="js/sesion-admin.js" defer></script>
+    <script src="../js/datos-productos.js" defer></script>
     <script src="js/datos-productos-admin.js" defer></script>
     <script src="js/productos-admin.js" defer></script>
 </head>
@@ -37,9 +39,7 @@
             </nav>
 
             <div class="sidebar-bottom">
-                <a href="../index.html" class="logout">
-                    Cerrar sesión
-                </a>
+                <button type="button" class="logout">Cerrar sesión</button>
             </div>
         </aside>
 
@@ -73,13 +73,14 @@
                 <section class="dashboard-section">
                     <div class="section-title">
                         <h2>Listado de productos</h2>
-                        <a href="producto-form.html" class="action-button">
+                        <a href="producto-form.html" class="action-button" data-solo-admin>
                             + Nuevo producto
                         </a>
                     </div>
                 </section>
 
                 <section class="dashboard-section">
+                    <button id="actualizar-desde-tienda" type="button" class="edit-button" data-solo-admin>Actualizar desde la tienda</button>
                     <p id="resultado-productos" class="admin-message" role="status" tabindex="-1"></p>
                     <noscript>Activa JavaScript para consultar y gestionar los productos.</noscript>
                     <p id="productos-vacios" class="empty-state" hidden>No hay productos registrados. Usa «Nuevo producto» para agregar el primero.</p>

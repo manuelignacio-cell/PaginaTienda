@@ -10,11 +10,34 @@ function entorno() {
         getItem: clave => almacen.get(clave) ?? null,
         setItem: (clave, valor) => almacen.set(clave, valor)
     } });
+    vm.runInContext(fs.readFileSync(path.join(__dirname, '../../js/datos-productos.js'), 'utf8'), contexto);
     vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/datos-productos-admin.js'), 'utf8'), contexto);
     return { api: vm.runInContext('ProductosAdmin', contexto), almacen, contexto };
 }
 
 const valido = { codigo: 'P004', nombre: 'Polera', descripcion: '', categoria: 'poleras', precio: '0', stock: '0', stockCritico: '', imagen: '' };
+
+test('usa nombres, precios e imágenes del catálogo original sin modificarlo', () => {
+    const { api, contexto } = entorno();
+    const origen = vm.runInContext('productos', contexto);
+    const antes = JSON.stringify(origen);
+    api.leer().forEach((p, i) => {
+        assert.equal(p.nombre, origen[i].nombre);
+        assert.equal(p.precio, origen[i].precio);
+        assert.equal(p.imagen, origen[i].imagen);
+    });
+    const guardados = api.leer();
+    guardados[1].precio = 24990;
+    guardados[1].stock = 80;
+    guardados[1].stockCritico = 10;
+    api.guardar(guardados);
+    assert.equal(api.leer()[1].precio, 24990);
+    api.actualizarDesdeTienda();
+    assert.equal(api.leer()[1].precio, origen[1].precio);
+    assert.equal(api.leer()[1].stock, 80);
+    assert.equal(api.leer()[1].stockCritico, 10);
+    assert.equal(JSON.stringify(origen), antes);
+});
 
 test('acepta precio gratis, decimales y campos opcionales vacíos', () => {
     const { api } = entorno();
